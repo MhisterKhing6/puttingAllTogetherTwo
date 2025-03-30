@@ -20,7 +20,8 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource() {
         HikariDataSource dataSource = new HikariDataSource();
-        String url = "jdbc:mysql://" + parameterstoreUtil.getParameter("/weekfiveproject/db/host", false) + ":/"  + parameterstoreUtil.getParameter("/weekfiveproject/db/port", false) +  parameterstoreUtil.getParameter("/weekfiveproject/db/name", false);
+        String url = "jdbc:mysql://" + parameterstoreUtil.getParameter("/weekfiveproject/db/host", false) + ":"  + parameterstoreUtil.getParameter("/weekfiveproject/db/port", false) +  "/" + parameterstoreUtil.getParameter("/weekfiveproject/db/name", false);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + url);
         dataSource.setJdbcUrl(url); //parameterstoreUtil.getParameter("/myapp/db/url", false));
         dataSource.setUsername(parameterstoreUtil.getParameter("/weekfiveproject/db/username", false));
         dataSource.setPassword(parameterstoreUtil.getParameter("/weekfiveproject/db/password", true));
