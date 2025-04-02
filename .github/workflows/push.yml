@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Blue-Green Deployment
+name: CI/CD Pipeline for Blue-Green  Deployment
 
 on:
   push:
